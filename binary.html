@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Converter | Translator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charactercount.html">Character Counter</a></li>
+            <li><a href="char.html">Text Conversions</a></li>
+            <li><a href="numewords.html">Number to Words</a></li>
+            <li><a href="fontify.html">Fontify</a></li>
+            <li><a href="binary.html">Binary Converter - Translator</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Binary Converter | Translator</h1>
+        <div class="input-group">
+            <label for="text">Enter Text or Binary</label>
+            <textarea id="text" placeholder="Enter text or binary"></textarea>
+        </div>
+        <div class="button-container">
+            <button onclick="convertToBinary()">Convert to Binary</button>
+            <button onclick="convertToText()">Convert to Text</button>
+            <button onclick="resetInput()">Reset</button>
+        </div>
+        <div class="results-container" id="resultContainer">
+            <p><span id="result"></span></p>
+        </div>
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>To use this tool:</p>
+                <p>1. Enter the text or binary you want to convert in the input field above.</p>
+                <p>2. Click "Convert to Binary" to convert text to binary.</p>
+                <p>3. Click "Convert to Text" to convert binary to text.</p>
+                <p>4. The result will be displayed below.</p>
+                <p>5. Click "Reset" to clear the input and hide the result.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 OpenAPI. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+    document.getElementById('navbar').classList.toggle('active');
+}
+
+function convertToBinary() {
+    const input = document.getElementById('text').value.trim();
+    const result = document.getElementById('result');
+
+    if (input === '') {
+        document.getElementById('text');
+        document.getElementById('result').textContent = '';
+        document.getElementById('resultContainer').style.display = 'none';
+    } else {
+        let binaryResult = '';
+
+        for (let i = 0; i < input.length; i++) {
+            let binaryChar = input[i].charCodeAt(0).toString(2);
+            binaryResult += '0'.repeat(8 - binaryChar.length) + binaryChar + ' ';
+        }
+
+        result.textContent = binaryResult.trim();
+        document.getElementById('resultContainer').style.display = 'block';
+    }
+}
+
+function convertToText() {
+    const input = document.getElementById('text').value.trim();
+    const result = document.getElementById('result');
+
+    if (input === '') {
+        document.getElementById('text');
+        document.getElementById('result').textContent = '';
+        document.getElementById('resultContainer').style.display = 'none';
+    } else {
+        let textResult = '';
+
+        input.split(' ').forEach(bin => {
+            textResult += String.fromCharCode(parseInt(bin, 2));
+        });
+
+        result.textContent = textResult;
+        document.getElementById('resultContainer').style.display = 'block';
+    }
+}
+
+function resetInput() {
+    document.getElementById('text').value = '';
+    document.getElementById('result').textContent = '';
+    document.getElementById('resultContainer').style.display = 'none';
+}
+
+    </script>
+</body>
+</html>

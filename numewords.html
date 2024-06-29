@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers to Words Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charactercount.html">Character Counter</a></li>
+            <li><a href="char.html">Text Conversions</a></li>
+            <li><a href="numewords.html">Number to Words</a></li>
+            <li><a href="fontify.html">Fontify</a></li>
+            <li><a href="binary.html">Binary Converter - Translator</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Numbers to Words</h1>
+        <div class="input-group">
+            <label for="number">Enter a Number</label>
+            <input type="number" id="number" placeholder="Enter a number..."></input>
+        </div>
+        <div class="button-container">
+            <button onclick="convertToWords()">Convert</button>
+            <button onclick="resetInput()">Reset</button>
+        </div>
+        <div class="results-container" id="resultContainer">
+             <h3>Result:</h3>
+            <p> <span id="result"></span></p>
+        </div>
+        <div class="instructions">
+            <h2>How to Use Numbers to Words Converter</h2>
+            <p>1. Enter a number in the input field above.</p>
+            <p>2. Click the 'Convert' button to transform the number into words.</p>
+            <p>3. The result will appear in the box below the buttons.</p>
+            <p>4. Use the 'Reset' button to clear the input and result.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 OpenAPI. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

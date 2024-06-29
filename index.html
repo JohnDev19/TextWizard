@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextWizard - Your Ultimate Text Tool Suite</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charactercount.html">Character Counter</a></li>
+            <li><a href="char.html">Text Conversions</a></li>
+            <li><a href="numewords.html">Number to Words</a></li>
+            <li><a href="fontify.html">Fontify</a></li>
+            <li><a href="binary.html">Binary Converter - Translator</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <h1>TextWizard</h1>
+        <p>Transforming Text, One Tool at a Time</p>
+    </div>
+    <div class="container">
+        <div class="tool-grid">
+            <div class="tool-card">
+                <i class="fas fa-calculator"></i>
+                <h2>Character Counter</h2>
+                <p>Count characters, words, and more in your text.</p>
+                <a href="charactercount.html">Go to Tool</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-font"></i>
+                <h2>Text Conversions</h2>
+                <p>Convert text to various formats and cases.</p>
+                <a href="char.html">Go to Tool</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-sort-numeric-down"></i>
+                <h2>Number to Words</h2>
+                <p>Convert numbers to their word representation.</p>
+                <a href="numewords.html">Go to Tool</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-text-height"></i>
+                <h2>Fontify</h2>
+                <p>Transform your text with unique font styles.</p>
+                <a href="fontify.html">Go to Tool</a>
+            </div>
+            <div class="tool-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h2>Binary Converter</h2>
+                <p>Translate text to binary and vice versa.</p>
+                <a href="binary.html">Go to Tool</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            document.getElementById('navbar').classList.toggle('active');
+        }
+        const animateBg = document.querySelector('.animate-bg');
+        for (let i = 0; i < 50; i++) {
+            const span = document.createElement('span');
+            span.style.left = Math.random() * window.innerWidth + 'px';
+            span.style.animationDuration = 25 + Math.random() * 30 + 's';
+            span.style.animationDelay = Math.random() * 5 + 's';
+            animateBg.appendChild(span);
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 OpenAPI. All rights reserved.</p>
+    </footer>
+</body>
+</html>

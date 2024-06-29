@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontify - Text to Font Converter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charactercount.html">Character Counter</a></li>
+            <li><a href="char.html">Text Conversions</a></li>
+            <li><a href="numewords.html">Number to Words</a></li>
+            <li><a href="fontify.html">Fontify</a></li>
+            <li><a href="binary.html">Binary Converter - Translator</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Fontify</h1>
+        <div class="input-group">
+            <label for="text">Enter Your Text</label>
+            <textarea id="text" placeholder="Type or paste your text here..."></textarea>
+           <a href="#" class="copy-button" onclick="copyText()"><i class="fas fa-copy"></i></a>
+
+            <div class="alert-message" id="alertMessage">
+            Copied!
+        </div>
+        </div>
+        <div class="convert-container">
+            <button class="convert-button" onclick="convertFont()">Convert</button>
+            <div class="font-dropdown">
+                <button onclick="toggleDropdown()" class="font-dropdown-btn">Fonts</button>
+                <div id="fontDropdown" class="font-dropdown-content">
+                    <a href="#" onclick="selectFont('mathsans')">Math Sans</a>
+                    <a href="#" onclick="selectFont('serif')">Serif</a>
+                    <a href="#" onclick="selectFont('handwriting')">Handwriting</a>
+                    <a href="#" onclick="selectFont('scriptbold')">Script Bold</a>
+                    <a href="#" onclick="selectFont('script')">script</a>
+                    <a href="#" onclick="selectFont('sansitalic')">Sans Italic</a>
+                    <a href="#" onclick="selectFont('outline')">Outline</a>
+                    <a href="#" onclick="selectFont('sansbold')">Sans Bold</a>
+                    <a href="#" onclick="selectFont('bolditalic')">Bold Italic</a>
+                    <a href="#" onclick="selectFont('gothic')">Gothic</a>
+                    <a href="#" onclick="selectFont('typewriter')">Typewriter</a>
+                    <a href="#" onclick="selectFont('square')">Square</a>
+                    <a href="#" onclick="selectFont('blue')">Blue</a>
+                    <a href="#" onclick="selectFont('widespace')">Widespace</a>
+                    <a href="#" onclick="selectFont('lightshade')">Lightshade</a>
+                    
+                </div>
+            </div>
+           <button onclick="resetToNormal()">Normal</button>
+        </div>
+        <div class="instructions">
+            <h2>How to Use Fontify</h2>
+            <p>1. Enter or paste your text in the text area above.</p>
+            <p>2. Select a font style from the dropdown menu.</p>
+            <p>3. Click the 'Convert' button to transform your text into the selected font style.</p>
+            <p>4. Use the 'Normal' button to revert the text to its original form.</p>
+            <p>5. Use the copy button (📋) to copy the converted text to your clipboard.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 OpenAPI. All rights reserved.</p>
+    </footer>
+   <script src="script.js"></script>
+</body>
+</html>

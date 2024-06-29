@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="charactercount.html">Character Counter</a></li>
+            <li><a href="char.html">Text Conversions</a></li>
+            <li><a href="numewords.html">Number to Words</a></li>
+            <li><a href="fontify.html">Fontify</a></li>
+            <li><a href="binary.html">Binary Converter - Translator</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Character Counter</h1>
+        <div class="input-group">
+            <label for="text">Enter Your Text</label>
+            <textarea id="text" placeholder="Type or paste your text here..."></textarea>
+        </div>
+        <div class="button-container">
+            <button onclick="countText()">Count</button>
+            <button onclick="resetText()">Reset</button>
+        </div>
+        <div class="results-container" id="results">
+            <p><strong>Characters:</strong> <span id="charCount"></span></p>
+            <p><strong>Characters (without spaces):</strong> <span id="charCountNoSpaces"></span></p>
+            <p><strong>Words:</strong> <span id="wordCount"></span></p>
+            <p><strong>Paragraphs:</strong> <span id="paraCount"></span></p>
+            <p><strong>Reading Time:</strong> <span id="readingTime"></span></p>
+            <p><strong>Speech Time:</strong> <span id="speechTime"></span></p>
+        </div>
+        <div class="instructions">
+            <h2>How to Use Character Counter</h2>
+            <p>1. Enter your text in the box below.</p> 
+            <p>2. Click "Count" to see the number of characters, words, paragraphs, reading time, and speech time.</p>
+            
+             <p>3. Click "Reset" to clear the text and hide the results.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 OpenAPI. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
