@@ -62,7 +62,7 @@
             overflow: hidden;
         }
         .hero h1 {
-            font-size: 1rem;
+            font-size: 100px;
             margin-bottom: 0.5rem;
             z-index: 1;
         }
