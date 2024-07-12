@@ -427,7 +427,6 @@
             }
         }
         
-        /* Positioning the copy button */
 .copy-button {
     position: absolute;
     top: -1px;
@@ -441,7 +440,7 @@
 
 
 .copy-button:hover {
-    color: #0056b3; /* Darker color on hover */
+    color: #0056b3;
 }
 
 
